@@ -1,13 +1,15 @@
 ##cubietruck安装
 
 ###common soft
-
+---
+```bash
 sudo apt-get install aptitude tmux unrar-free unzip curl nethogs htop socat -y
 sudo apt-get install git subversion mercurial build-essential make -y
-#sudo apt-get install libav-tools #avconv
-
+sudo apt-get install libav-tools #avconv
+```
 ###mjpeg-streamer
-
+---
+```bash
 sudo apt-get install subversion  -y 
 sudo apt-get install libv4l-dev libjpeg8-dev  -y
 sudo apt-get install imagemagick fswebcam v4l-utils -y
@@ -20,10 +22,11 @@ svn co https://svn.code.sf.net/p/mjpg-streamer/code/mjpg-streamer/
 cd mjpg-streamer/mjpg-streamer
 make USE_LIBV4L2=true clean all
 sudo make DESTDIR=/usr install
-
+```
 
 ###ffmepg
-
+---
+```bash
 sudo apt-get install yasm -y
 sudo aptitude install libx264-dev libfaac-dev libmp3lame-dev libtheora-dev libvorbis-dev libxvidcore-dev libxext-dev libxfixes-dev -y
 wget http://ffmpeg.org/releases/ffmpeg-2.8.3.tar.bz2
@@ -32,10 +35,11 @@ tar -xjvf ffmpeg-2.4.1.tar.bz2
 ./configure --prefix=/usr/local/ffmpeg --enable-gpl --enable-version3 --enable-nonfree --enable-postproc --enable-pthreads --enable-libfaac --enable-libmp3lame --enable-libtheora --enable-libx264 --enable-libxvid --enable-x11grab --enable-libvorbis  
 make  
 make install  
-
+```
 
 ###nginx rtmp
-
+---
+```bash
 sudo apt-get update
 sudo apt-get -y install nginx
 sudo apt-get -y remove nginx
@@ -53,11 +57,13 @@ cd nginx
 
 make
 make install
-
+```
 or
-wget http://nginx.org/download/nginx-1.9.X.tar.gz  x为最新版本号，自行更换 2015.12.18为1.9.9
+x为最新版本号，自行更换 2015.12.18为1.9.9
+```bash
+wget http://nginx.org/download/nginx-1.9.X.tar.gz  
 tar zxvf nginx-1.9.X.tar.gz
-
-
+```
+```bash
 sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good screen -y
-
+```
