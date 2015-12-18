@@ -1,9 +1,8 @@
 
 ![Markdown](http://dl.cubieboard.org/media/Pictures/cubie_logo/cubie_48x48.png)
 
-[TOC]
 #cubietruck使用笔记
-
+![Markdown](https://github.com/forrestsun/cubieboard/blob/master/img/cubietruck.jpg)
 ##硬件特性：
 1. AllWinnerTech SOC A20，ARM® Cortex™-A7 Dual-Core，ARM® Mali400 MP2 Complies with OpenGL ES 2.0/1.1
 2. 1GB/2GB DDR3@480MHz (960MTPS)
