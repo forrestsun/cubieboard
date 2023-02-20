@@ -1,6 +1,4 @@
 
-![Markdown](http://dl.cubieboard.org/media/Pictures/cubie_logo/cubie_48x48.png)
-
 # cubietruck使用笔记
 ![Markdown](https://github.com/forrestsun/cubieboard/blob/master/img/cubietruck.jpg)
 ## 硬件特性：
@@ -86,7 +84,7 @@ tar zxvf nginx-1.9.X.tar.gz
 sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good screen -y
 ```
 ### 测试
-####ffmpeg CPU占用率40%~60%/摄像头
+#### ffmpeg CPU占用率40%~60%/摄像头
 ```bash
 ./ffmpeg -r 30 -f video4linux2 -i /dev/video0 -vcodec libx264 -r:v 25 -b:v 800k -f mpeg1video -preset ultrafast -s 640x480 -f flv rtmp://192.168.8.140/rtmp/live
 ```
