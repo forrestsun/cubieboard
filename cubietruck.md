@@ -1,9 +1,9 @@
 
 ![Markdown](http://dl.cubieboard.org/media/Pictures/cubie_logo/cubie_48x48.png)
 
-#cubietruck使用笔记
+# cubietruck使用笔记
 ![Markdown](https://github.com/forrestsun/cubieboard/blob/master/img/cubietruck.jpg)
-##硬件特性：
+## 硬件特性：
 1. AllWinnerTech SOC A20，ARM® Cortex™-A7 Dual-Core，ARM® Mali400 MP2 Complies with OpenGL ES 2.0/1.1
 2. 1GB/2GB DDR3@480MHz (960MTPS)
 3. HDMI&VGA 1080P display output on-board
@@ -17,7 +17,7 @@
 11. PCB size：11cm *8cm*1.4mm，very suite for installing a 2.5’ HDD
 
 
-##常用软件安装
+## 常用软件安装
 ---
 ```bash
 sudo apt-get install aptitude tmux unrar-free unzip curl nethogs htop socat -y
@@ -25,8 +25,8 @@ sudo apt-get install git subversion mercurial build-essential make -y
 sudo apt-get install libav-tools #avconv
 ```
 
-##视频处理
-###mjpeg-streamer安装
+## 视频处理
+### mjpeg-streamer安装
 ---
 ```bash
 sudo apt-get install subversion  -y 
@@ -43,7 +43,7 @@ make USE_LIBV4L2=true clean all
 sudo make DESTDIR=/usr install
 ```
 
-###ffmep安装
+### ffmep安装
 ---
 ```bash
 sudo apt-get install yasm -y
@@ -56,7 +56,7 @@ make
 make install  
 ```
 
-###nginx rtmp安装
+### nginx rtmp安装
 ---
 ```bash
 sudo apt-get update
@@ -85,12 +85,12 @@ tar zxvf nginx-1.9.X.tar.gz
 ```bash
 sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-good screen -y
 ```
-###测试
+### 测试
 ####ffmpeg CPU占用率40%~60%/摄像头
 ```bash
 ./ffmpeg -r 30 -f video4linux2 -i /dev/video0 -vcodec libx264 -r:v 25 -b:v 800k -f mpeg1video -preset ultrafast -s 640x480 -f flv rtmp://192.168.8.140/rtmp/live
 ```
-####mjpeg CPU占用率2%~10%
+#### mjpeg CPU占用率2%~10%
 ```bash
 mjpg_streamer -i "/usr/lib/input_uvc.so -d /dev/video0 -r 1280x720 -f 30" -o "/usr/lib/output_http.so  -w /usr/www"
 ```
